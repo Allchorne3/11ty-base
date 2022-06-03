@@ -8,8 +8,8 @@
     "build:11ty": "eleventy",
     "dev:assets": "mix watch",
     "build:assets": "mix --production",
-    "watch": "concurrently --kill-others \"npm run dev:11ty\" \"npm run dev:assets\"",
-    "prod": "concurrently --kill-others \"npm run build:11ty\" \"npm run build:assets\""
+    "development": "concurrently --kill-others \"npm run dev:11ty\" \"npm run dev:assets\"",
+    "production": "npm run build:11ty && npm run build:assets"
   },
   "repository": {
     "type": "git",
