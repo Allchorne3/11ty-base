@@ -6,5 +6,7 @@
     "/public/assets/blog/article-3.jpg": "/public/assets/blog/article-3.jpg",
     "/public/assets/blog/article-4.jpg": "/public/assets/blog/article-4.jpg",
     "/public/assets/blog/article-5.jpg": "/public/assets/blog/article-5.jpg",
-    "/public/assets/logo.svg": "/public/assets/logo.svg"
+    "/public/assets/logo.svg": "/public/assets/logo.svg",
+    "/public/admin/config.yml": "/public/admin/config.yml",
+    "/public/admin/index.html": "/public/admin/index.html"
 }
