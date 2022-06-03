@@ -1,0 +1,11 @@
+<li>
+  <article class="snippet">
+    <div>
+      <h3 class="snippet__title"><a href="{{this.url}}">{{this.data.title}}</a></h3>
+      <p class="snippet__meta">By <span>{{this.data.author}} on {{moment this.date format="MMMM DD, YYYY"}}</span></p>
+      <p class="snippet__body">{{this.data.description}}</p>
+      <a href="{{this.url}}" class="btn btn--primary">Continue Reading</a>
+    </div>
+    <img src="{{this.data.image}}" alt="{{this.data.imageAlt}}" class="snippet__img">
+  </article>
+</li>

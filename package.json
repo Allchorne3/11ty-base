@@ -4,8 +4,10 @@
   "description": "These are the starting files used by [Kevin Powell](https://kevinpowell.co) to create a personal blog site for the [Codementor](https://www.codementor.io/) DevProjects Challenge, [Create a fast and secure blog using JAMStack](https://www.codementor.io/projects/web/create-a-fast-and-secure-blog-using-jamstack-c93coupnxb). You are free to use them however you want to get started with the challenge, if you'd like to start working on creating the site without worrying about the content itself.",
   "main": "index.js",
   "scripts": {
-    "dev": "eleventy --serve",
-    "build": "eleventy"
+    "dev:11ty": "eleventy --serve",
+    "build:11ty": "eleventy",
+    "watch:assets": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "start": "concurrently --kill-others \"npm run dev:11ty\" \"npm run watch:assets\""
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,15 @@
   },
   "homepage": "https://github.com/Allchorne3/11ty-base#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.1"
+    "@11ty/eleventy": "^1.0.1",
+    "concurrently": "^7.2.1",
+    "cross-env": "^7.0.3",
+    "helper-moment": "^0.2.0",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.52.1",
+    "sass-loader": "^12.1.0"
+  },
+  "dependencies": {
+    "laravel-mix": "^6.0.44"
   }
 }
