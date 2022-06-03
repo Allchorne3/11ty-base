@@ -6,8 +6,10 @@
   "scripts": {
     "dev:11ty": "eleventy --serve",
     "build:11ty": "eleventy",
-    "watch:assets": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "start": "concurrently --kill-others \"npm run dev:11ty\" \"npm run watch:assets\""
+    "dev:assets": "mix watch",
+    "build:assets": "mix --production",
+    "watch": "concurrently --kill-others \"npm run dev:11ty\" \"npm run dev:assets\"",
+    "prod": "concurrently --kill-others \"npm run build:11ty\" \"npm run build:assets\""
   },
   "repository": {
     "type": "git",
@@ -25,11 +27,10 @@
     "concurrently": "^7.2.1",
     "cross-env": "^7.0.3",
     "helper-moment": "^0.2.0",
+    "laravel-mix": "^6.0.44",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.52.1",
     "sass-loader": "^12.1.0"
   },
-  "dependencies": {
-    "laravel-mix": "^6.0.44"
-  }
+  "dependencies": {}
 }
